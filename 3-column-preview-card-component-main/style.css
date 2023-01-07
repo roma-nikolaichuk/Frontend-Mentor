@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+body,
+.card-button {
+  background-color: var(--very-light-gray);
+}
+
+.grid-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card-container {
+  width: 960px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-column {
+  padding: 55px;
+}
+
+.card-image {
+  display: block;
+}
+
+.card-title {
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.75em;
+  margin: 20px 0;
+}
+
+.card-description {
+  color: var(--transparent-white);
+  line-height: 1.5;
+  margin-bottom: 75px;
+}
+
+.card-button {
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.card-button:hover {
+  cursor: pointer;
+  background: none;
+  color: var(--very-light-gray);
+  outline: 2px solid var(--very-light-gray);
+}
+
+.bg-orange {
+  background-color: var(--bright-orange);
+  border-radius: 10px 0px 0px 10px;
+}
+
+.orange {
+  color: var(--bright-orange);
+}
+
+.bg-cyan {
+  background-color: var(--dark-cyan);
+}
+
+.cyan {
+  color: var(--dark-cyan);
+}
+
+.bg-dark-cyan {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0px 10px 10px 0px;
+}
+
+.dark-cyan,
+.attribution a:hover {
+  color: var(--very-dark-cyan); 
+}
+
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #101010;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--dark-cyan);
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 960px) {
+  .card-container {
+    margin: 50px 0;
+    width: 335px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  
+  .bg-orange {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .bg-dark-cyan {
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .card-description {
+    margin-bottom: 25px;
+  }
+
+  .attribution {
+    position: initial;
+    margin-bottom: 0;
+    padding: 0 15px 15px;
+  }
+}

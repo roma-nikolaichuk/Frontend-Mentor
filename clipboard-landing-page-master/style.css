@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+:root {
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  height: 100%;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+header {
+  background: url("images/bg-header-desktop.png") no-repeat top / cover;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 20px;
+  padding: 100px 100px 0px;
+}
+
+.content {
+  grid-column: 3 / span 8;
+}
+
+.text-center {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mt-75 {
+  margin-top: 75px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li a,
+.attribution,
+.attribution a,
+a.icons {
+  color: var(--dark-grayish-blue);
+}
+
+p {
+  color: var(--grayish-blue);
+}
+
+.cta-container,
+.snippets,
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-container {
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: white;
+}
+
+.strong-cyan {
+  background-color: var(--strong-cyan);
+}
+
+.light-blue {
+  background-color: var(--light-blue);
+}
+
+.button.strong-cyan {
+  border-bottom: 4px solid hsl(171, 66%, 34%);
+  box-shadow: 0px 10px 35px -10px var(--strong-cyan);
+}
+
+.button.light-blue {
+  border-bottom: 4px solid hsl(233, 66%, 55%);
+  box-shadow: 0px 10px 35px -10px var(--grayish-blue);
+}
+
+.button:hover {
+  opacity: 0.6;
+}
+
+.button:active {
+  position: relative;
+  top: 5px;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.image-computer {
+  grid-column: 1 / span 5;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.snippets {
+  grid-column: 7 / span 5;
+  flex-direction: column;
+  gap: 75px;
+}
+
+.g-col-2 {
+  grid-column-end: span 2;
+}
+
+.g-col-4 {
+  grid-column-end: span 4;
+}
+
+.g-col-12 {
+  grid-column-end: span 12;
+}
+
+.g-start-2 {
+  grid-column-start: 2;
+}
+
+.g-start-3 {
+  grid-column-start: 3;
+}
+
+.g-start-10 {
+  grid-column-start: 10;
+}
+
+footer {
+  margin-top: 10rem;
+  background-color: hsla(201, 11%, 66%, 0.15);
+}
+
+.p-30-100 {
+  padding: 30px 100px;
+}
+
+.list-unstyled {
+  list-style: none;
+}
+
+li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.social > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.mt-1rem {
+  margin-top: 1rem;
+}
+
+.attribution a {
+  font-weight: bold;
+}
+
+a:hover:not(.button) {
+  cursor: pointer;
+  color: var(--strong-cyan);
+}
+
+a.icons i {
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 576px) {
+  .button {
+    width: auto !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-container {
+    padding: 100px 0 0;
+  }
+
+  .content,
+  .image-computer,
+  .snippets,
+  .g-col-12,
+  .g-col-4,
+  .g-col-2 {
+    grid-column: 2 / span 10;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .image-computer,
+  .grid-container .tool:not(:last-child),
+  .grid-container .company:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  .snippets,
+  footer .g-col-2 {
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 2rem;
+    grid-column: 6 / span 2;
+  }
+
+  li {
+    margin-bottom: 1rem !important;
+  }
+
+  .social {
+    margin-top: 1rem;
+  }
+
+  .social > :not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .grid-container {
+    padding: 100px 20px 0;
+  }
+
+  .content,
+  .g-col-12 {
+    grid-column: 2 / span 10;
+  }
+
+  .footer-logo {
+    align-self: center;
+  }
+
+  a.icons i {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  footer .grid-container {
+    padding-top: 50px;
+  }
+
+  .attribution {
+    margin: 2rem 0 1rem;
+  }
+}
